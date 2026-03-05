@@ -142,7 +142,7 @@ select{font-family:'DM Mono',monospace}
     <button class="rb" onclick="rng('ipc',999,this)">Todo</button>
   </div>
 </div>
-<div class="cw"><canvas id="c-ipc"></canvas></div>
+<div class="cw"><div class="cctitle" style="margin-bottom:.7rem">INFLACI&Oacute;N MENSUAL (%)</div><canvas id="c-ipc"></canvas></div>
 <div class="g3">
   <div class="cc"><div class="cctitle">IPC &mdash; &Iacute;ndice</div><canvas id="m-ipc-idx"></canvas>
     <p class="note">* La ca&iacute;da en ene. 2024 refleja el cambio de a&ntilde;o base (dic. 2023 = 100), no una baja real de precios.</p></div>
@@ -374,7 +374,7 @@ function renderTooltip(ov, geom, idx){
   geom.datasets.forEach(function(ds){
     var v=ds.data[idx];
     var vc=v!=null&&!isNaN(v)?Number(v).toLocaleString('es-CL',{maximumFractionDigits:2}):'--';
-    tlines.push({txt:(ds.label?ds.label+': ':'')+vc, col:(Array.isArray(ds.borderColor)?ds.borderColor[idx]:ds.borderColor)||'#94a3b8', bold:false});
+    tlines.push({txt:(ds.label?ds.label+': ':'')+vc, col:'#e2e8f0', bold:false});
   });
   ctx.font='bold 12px monospace';
   var mw=0;
